@@ -10,7 +10,25 @@ const Layout = () => {
       <main>
         <Outlet></Outlet>
       </main>
-      <Footer></Footer>
+      <Footer>
+      <ComprasTable produtos={produtos}></ComprasTable>
+      <ProdutoForm>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Fechar
+          </Button>
+          <Button variant="primary" onClick={handleShow}>
+            Salvar
+          </Button>
+        </Modal.Footer>
+      </Modal></Footer>
+      </ProdutoForm>
     </Container>
   );
 };

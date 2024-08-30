@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Container>
       <Header></Header>

@@ -14,25 +14,22 @@ const Cardapio = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+     
       <ComprasTable produtos={produtos}></ComprasTable>
-      <ProdutoForm></ProdutoForm>
-
-      <Modal show={show} onHide={handleClose}>
+      <ProdutoForm><Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Fechar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" onClick={handleShow}>
+        Salvar
           </Button>
         </Modal.Footer>
+      </Modal></ProdutoForm>
       </Modal>
     </>
   );
